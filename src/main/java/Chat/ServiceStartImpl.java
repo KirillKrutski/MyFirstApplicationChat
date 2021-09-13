@@ -1,0 +1,37 @@
+package Chat;
+
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+public class ServiceStartImpl extends RegistrationWindow implements ServiceStart , ActionListener {
+    @Override
+    public void start() {
+
+        //create objects
+        JFrame chatJFrame = new JFrame("KruChat");
+        JButton registrationButton = new JButton("registration");
+        //JPanel panel = new JPanel();
+
+
+        // window
+        chatJFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        chatJFrame.setSize(540 , 360); // size of application
+        chatJFrame.setLayout(null);
+        chatJFrame.setVisible(true);
+
+        // add button "registration"
+        registrationButton.setBounds(160, 120, 200,40);
+        registrationButton.setFocusable(false);
+        registrationButton.addActionListener(this);
+        chatJFrame.add(registrationButton);
+
+        //
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent actionEvent) {
+        startRegistration();
+    }
+}
