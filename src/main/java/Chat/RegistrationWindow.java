@@ -30,7 +30,7 @@ public class RegistrationWindow extends JFrame implements ActionListener , Clien
         buttonConnect.setFocusable(false);
 
         // Поле с паролем
-        passwordText = new JTextField();
+        passwordText = new JTextField(15);
         passwordText.setBounds(100,50,165,25);
 
         // Создание панели с текстовыми полями
